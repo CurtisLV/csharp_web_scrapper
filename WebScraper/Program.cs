@@ -18,7 +18,10 @@ class Program
         htmlDocument.LoadHtml(html);
 
         // get temparature
-
+        var temperatureElement = htmlDocument.DocumentNode.SelectSingleNode(
+            "//span[@class='CurrentConditions--tempValue--MHmYY']"
+        );
+        var temperature = temperatureElement.InnerText;
 
         // get conditions
 
