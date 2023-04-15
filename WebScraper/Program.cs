@@ -34,5 +34,12 @@ class Program
         Console.WriteLine($"Conditions: {conditions}");
 
         // get location
+
+        var locationElement = htmlDocument.DocumentNode.SelectSingleNode(
+            "//h1[@class='CurrentConditions--location--1YWj_']"
+        );
+        var location = locationElement.InnerText.Trim();
+
+        Console.WriteLine($"Location: {location}");
     }
 }
