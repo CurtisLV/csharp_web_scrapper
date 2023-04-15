@@ -21,9 +21,17 @@ class Program
         var temperatureElement = htmlDocument.DocumentNode.SelectSingleNode(
             "//span[@class='CurrentConditions--tempValue--MHmYY']"
         );
-        var temperature = temperatureElement.InnerText;
+        var temperature = temperatureElement.InnerText.Trim();
+
+        Console.WriteLine($"Temperature: {temperature} F");
 
         // get conditions
+        var conditionsElement = htmlDocument.DocumentNode.SelectSingleNode(
+            "//span[@class='CurrentConditions--phraseValue--mZC_p']"
+        );
+        var conditions = temperatureElement.InnerText.Trim();
+
+        Console.WriteLine($"Conditions: {conditions}");
 
         // get location
     }
