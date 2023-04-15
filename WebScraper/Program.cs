@@ -27,9 +27,9 @@ class Program
 
         // get conditions
         var conditionsElement = htmlDocument.DocumentNode.SelectSingleNode(
-            "//span[@class='CurrentConditions--phraseValue--mZC_p']"
+            "//div[@class='CurrentConditions--phraseValue--mZC_p']"
         );
-        var conditions = temperatureElement.InnerText.Trim();
+        var conditions = conditionsElement.InnerText.Trim();
 
         Console.WriteLine($"Conditions: {conditions}");
 
